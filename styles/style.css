@@ -1,0 +1,29 @@
+body {
+  color: #FFFFFF;
+	background-color: #000000;
+  font-family: 'Lucida Console', Monaco, monospace;
+  text-align: center;
+}
+
+h1 {
+  font-size: 7em;
+  font-style: italic;
+}
+
+h2 {
+  font-size: 3em;
+}
+
+h3 {
+  font-size: 1.5em;
+  font-weight: normal;
+}
+
+h1, h2 {
+  font-family: 'Grand Hotel', cursive;
+}
+
+h1, h2, h3 {
+  margin-top: 0em;
+  margin-bottom: 0em;
+}

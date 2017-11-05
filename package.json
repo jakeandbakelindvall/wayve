@@ -1,0 +1,21 @@
+{
+  "name": "wayve",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "engines": {
+    "node": "6.10.0",
+    "npm": "3.10.10"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "Jake Lindvall",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.1",
+    "p5": "^0.5.15",
+    "pug": "^2.0.0-rc.4"
+  }
+}
