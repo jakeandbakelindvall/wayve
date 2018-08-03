@@ -10,7 +10,7 @@ var square = new p5.SqrOsc();
 var sine = new p5.SinOsc();
 var mic = new p5.AudioIn();
 var fft = new p5.FFT();
-var mode = 'cube';
+var mode = "cube";
 var caption;
 
 /*------------*/
@@ -23,16 +23,16 @@ var caption;
 //one-time initializations
 //
 function setup() {
-  //alert the masses that this won't work well without headphones
-  alert('use headphones for optimal experience');
+  //alert the masses that this won"t work well without headphones
+  alert("use headphones for optimal experience");
 
   //only need to find the caption text html element once
-  caption = $('#caption');
+  caption = $("#caption");
 
   //set canvas to be centered rectangle
   var h = windowHeight - 100;
   canvas = createCanvas((2 * h / 3), (2 * h / 3), WEBGL);
-  canvas.parent('canvasDiv');
+  canvas.parent("canvasDiv");
   
   //drawing settings
   colorMode(HSB);
@@ -106,8 +106,8 @@ function draw() {
   stroke(fg, 30, 100);
 
   //update top text to match this hue
-  var hsb = 'hsl(' + fg + ', 30%, 60%)';
-  caption.css({'color': hsb });
+  var hsb = "hsl(" + fg + ", 30%, 60%)";
+  caption.css({"color": hsb });
   
   //depending on noiseTwo variable, change stroke thickness
   var beefiness = map(volume, 0, 20, 5, 120); //beef
@@ -117,9 +117,9 @@ function draw() {
   rotateX(i / 120);
   rotateY(pitch);
   rotateZ(noiseOne / 100);
-  if (mode == 'cube') {
+  if (mode == "cube") {
     box((width / 3), (width / 3), (width / 3));
-  } else if (mode == 'sphere') {
+  } else if (mode == "sphere") {
     sphere((width / 3), 10, 8);
   } else {
     torus((width / 4), (width / 9), 10, 8);
@@ -138,14 +138,14 @@ function draw() {
 //
 //on canvas click, change the shape type and inform the user
 //
-$(document).on('click', 'canvas', function() {
-  if (mode == 'cube') {
-    mode = 'sphere';
-  } else if (mode == 'sphere') {
-    mode = 'torus';
+$(document).on("click", "canvas", function() {
+  if (mode == "cube") {
+    mode = "sphere";
+  } else if (mode == "sphere") {
+    mode = "torus";
   } else {
-    mode = 'cube';
+    mode = "cube";
   }
 
-  $('#shapeName').text('current shape: ' + mode + '.');
+  $("#shapeName").text("current shape: " + mode + ".");
 });
